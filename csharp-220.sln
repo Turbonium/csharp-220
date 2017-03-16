@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment1HelloWorld", "Se
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment2ListsandMoreLists", "Assignment2ListsandMoreLists\Assignment2ListsandMoreLists.csproj", "{6BC2F24E-431B-43C8-99A7-7FB57FB2C7FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment3SortingListViewColumns", "Assignment3SortingListViewColumns\Assignment3SortingListViewColumns.csproj", "{BC432F3A-42D6-4969-9FC0-B6A499BB860E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6BC2F24E-431B-43C8-99A7-7FB57FB2C7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC2F24E-431B-43C8-99A7-7FB57FB2C7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC2F24E-431B-43C8-99A7-7FB57FB2C7FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC432F3A-42D6-4969-9FC0-B6A499BB860E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC432F3A-42D6-4969-9FC0-B6A499BB860E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC432F3A-42D6-4969-9FC0-B6A499BB860E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC432F3A-42D6-4969-9FC0-B6A499BB860E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
