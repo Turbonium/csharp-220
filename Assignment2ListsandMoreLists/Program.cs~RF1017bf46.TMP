@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment2ListsandMoreLists
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var users = new List<Models.User>();
+
+            users.Add(new Models.User { Name = "Dave", Password = "hello" });
+            users.Add(new Models.User { Name = "Steve", Password = "steve" });
+            users.Add(new Models.User { Name = "Lisa", Password = "hello" });
+
+            var onlyhello = string.Join(Environment.NewLine, users.Where(x => x.Password.ToUpper().Contains("HELLO")).Select(x=>string.Format($"Name: {x.Name}, Password: {x.Password}")));
+
+            Console.WriteLine($"Users which have a password of Hello:");
+            Console.WriteLine(onlyhello);
+
+
+
+        }
+    }
+}
