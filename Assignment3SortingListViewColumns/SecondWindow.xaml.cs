@@ -20,6 +20,9 @@ namespace Assignment3SortingListViewColumns
     /// </summary>
     public partial class SecondWindow : Window
     {
+        bool? nameSortAsc = null;
+        bool? passwordSortAsc = null;
+
         public SecondWindow()
         {
             InitializeComponent();
@@ -41,14 +44,33 @@ namespace Assignment3SortingListViewColumns
         {
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(uxList.ItemsSource);
             view.SortDescriptions.Clear();
+
             if (e.OriginalSource.ToString().Contains("Name"))
             {
-                view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+                if (nameSortAsc == false || nameSortAsc == null)
+                {
+                    nameSortAsc = true;
+                    view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));                    
+                }
+                else
+                {
+                    nameSortAsc = false;
+                    view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Descending));
+                }
             }
 
             if (e.OriginalSource.ToString().Contains("Password"))
             {
-                view.SortDescriptions.Add(new SortDescription("Password", ListSortDirection.Ascending));
+                if (passwordSortAsc == false || passwordSortAsc == null)
+                {
+                    passwordSortAsc = true;
+                    view.SortDescriptions.Add(new SortDescription("Password", ListSortDirection.Ascending));
+                }
+                else
+                {
+                    passwordSortAsc = false;
+                    view.SortDescriptions.Add(new SortDescription("Password", ListSortDirection.Descending));
+                }
             }
         }
     }
