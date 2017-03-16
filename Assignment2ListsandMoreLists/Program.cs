@@ -15,6 +15,8 @@ namespace Assignment2ListsandMoreLists
         static void Main(string[] args)
         {
             var users = new List<Models.User>();
+
+            //Populate initial set of users
             users.Add(new Models.User { Name = "Dave", Password = "hello" });
             users.Add(new Models.User { Name = "Steve", Password = "steve" });
             users.Add(new Models.User { Name = "Lisa", Password = "hello" });
@@ -26,6 +28,7 @@ namespace Assignment2ListsandMoreLists
             Console.WriteLine(initial);
             Console.WriteLine("-----------------------------------------");
 
+            //Display only users which have a password of hello
 
             var onlyhello = string.Join(Environment.NewLine, users.Where(x => x.Password.ToUpper().Contains("HELLO")).Select(x=>string.Format($"Name: {x.Name}, Password: {x.Password}")));
 
@@ -37,8 +40,7 @@ namespace Assignment2ListsandMoreLists
 
             var removePassword = users.ToList();
             removePassword.RemoveAll(x => x.Name.ToLower().Contains(x.Password.ToLower()));
-            users = removePassword;
-            var removedMatchingPassword = string.Join(Environment.NewLine, users.Select(x => string.Format($"Name: {x.Name}, Password: {x.Password}")));
+            var removedMatchingPassword = string.Join(Environment.NewLine, removePassword.Select(x => string.Format($"Name: {x.Name}, Password: {x.Password}")));
 
             Console.WriteLine("Removed users where username equaled lowercase password:");
             Console.WriteLine(removedMatchingPassword);
@@ -48,11 +50,10 @@ namespace Assignment2ListsandMoreLists
 
             var removeFirstHello = users.ToList();
             removeFirstHello.Remove(removeFirstHello.First(x=>x.Password.ToUpper().Contains("HELLO")));
-            users = removeFirstHello;
-            var removedFirstHello = string.Join(Environment.NewLine, users.Select(x => string.Format($"Name: {x.Name}, Password: {x.Password}")));
+            var removedFirstHello = string.Join(Environment.NewLine, removeFirstHello.Select(x => string.Format($"Name: {x.Name}, Password: {x.Password}")));
 
             //Of the remaining users, remove the first user which has a password of hello
-            Console.WriteLine("Of the Remaining users, Removed first user with a password of hello:");
+            Console.WriteLine("Removed first user with a password of hello:");
             Console.WriteLine(removedFirstHello);
             Console.WriteLine("-----------------------------------------");
 
