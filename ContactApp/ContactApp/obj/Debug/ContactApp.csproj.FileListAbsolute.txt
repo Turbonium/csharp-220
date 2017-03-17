@@ -1,1 +1,13 @@
 C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\ContactApp.exe.config
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\ContactApp.exe
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\ContactApp.pdb
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\MainWindow.g.cs
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\App.g.cs
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp_MarkupCompile.cache
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp_MarkupCompile.lref
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\MainWindow.baml
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.g.resources
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.Properties.Resources.resources
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.csproj.GenerateResource.Cache
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.exe
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.pdb

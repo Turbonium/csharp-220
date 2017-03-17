@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContactsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactId" />
+    </Key>
+    <Property Name="ContactId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactPhoneType" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactPhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ContactAge" Type="int" Nullable="false" />
+    <Property Name="ContactNotes" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ContactCreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ContactsModelStoreContainer">
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
