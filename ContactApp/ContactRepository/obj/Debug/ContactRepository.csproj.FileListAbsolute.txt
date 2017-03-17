@@ -1,0 +1,12 @@
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\ContactRepository.dll.config
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\ContactRepository.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\ContactRepository.pdb
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\ContactDB.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\EntityFramework.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\EntityFramework.SqlServer.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\ContactDB.pdb
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\EntityFramework.xml
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\obj\Debug\ContactRepository.csprojResolveAssemblyReference.cache
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\obj\Debug\ContactRepository.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactRepository\obj\Debug\ContactRepository.pdb

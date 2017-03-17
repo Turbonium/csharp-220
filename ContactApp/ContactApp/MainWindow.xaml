@@ -12,5 +12,16 @@
                 <MenuItem x:Name="uxFileNew" Header="_New" Click="uxFileNew_Click" />
             </MenuItem>
         </Menu>
+        <ListView x:Name="uxContactList" Height="200">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Email}" Header="Email" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding PhoneType}" Header="Phone Type" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding PhoneNumber}" Header="Phone Number" Width="100" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Age}" Header="Age" Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
     </StackPanel>
 </Window>

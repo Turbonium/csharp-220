@@ -4,8 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ContactDB;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ContactRepository
 {

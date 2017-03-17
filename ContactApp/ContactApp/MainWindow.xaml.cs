@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ContactApp.Models;
 
 namespace ContactApp
 {
@@ -23,11 +24,27 @@ namespace ContactApp
         public MainWindow()
         {
             InitializeComponent();
+            LoadContacts();
         }
 
         private void uxFileNew_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            var window = new ContactWindow();
+
+            if (window.ShowDialog() == true)
+            {
+                App.ContactRepository.Add(window.Contact.ToRepositoryModel());
+                LoadContacts();
+            }
+        }
+
+        private void LoadContacts()
+        {
+            var contacts = App.ContactRepository.GetAll();
+
+            uxContactList.ItemsSource = contacts
+                .Select(t => ContactModel.ToModel(t))
+                .ToList();
         }
     }
 }

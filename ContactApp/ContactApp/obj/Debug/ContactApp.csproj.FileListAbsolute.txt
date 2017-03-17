@@ -11,3 +11,14 @@ C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.Properties
 C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.csproj.GenerateResource.Cache
 C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.exe
 C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.pdb
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\ContactRepository.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\EntityFramework.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\ContactDB.dll
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\ContactRepository.pdb
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\EntityFramework.xml
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\ContactDB.pdb
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.csprojResolveAssemblyReference.cache
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactWindow.g.cs
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactWindow.baml

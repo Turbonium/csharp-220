@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace ContactApp
 {
@@ -13,5 +7,20 @@ namespace ContactApp
     /// </summary>
     public partial class App : Application
     {
+        private static ContactRepository.ContactRepository contactRepository;
+
+        static App()
+        {
+            contactRepository = new ContactRepository.ContactRepository();
+        }
+
+        public static ContactRepository.ContactRepository ContactRepository
+        {
+            get
+            {
+                return contactRepository;
+            }
+        }
+
     }
 }
