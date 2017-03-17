@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Session1HelloWorld
+namespace Assignment1HelloWorld
 {
     /// <summary>
     /// Interaction logic for App.xaml

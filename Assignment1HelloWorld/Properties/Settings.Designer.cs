@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Session1HelloWorld.Properties
+namespace Assignment1HelloWorld.Properties
 {
 
 
