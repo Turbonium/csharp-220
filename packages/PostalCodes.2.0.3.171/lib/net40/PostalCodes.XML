@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PostalCodes</name>
+    </assembly>
+    <members>
+        <member name="T:PostalCodes.Country">
+            <summary>
+            Representation of a country
+            </summary>
+        </member>
+        <member name="F:PostalCodes.Country._backingCode">
+            <summary>
+            The _backing code
+            </summary>
+        </member>
+        <member name="M:PostalCodes.Country.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:PostalCodes.Country"/> class.
+            </summary>
+        </member>
+        <member name="M:PostalCodes.Country.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PostalCodes.Country"/> class.
+            </summary>
+            <param name="code">The country code.</param>
+        </member>
+        <member name="M:PostalCodes.Country.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PostalCodes.Country"/> class.
+            </summary>
+            <param name="code">The country code.</param>
+            <param name="name">The country name</param>
+        </member>
+        <member name="M:PostalCodes.Country.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="M:PostalCodes.Country.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.Country.Equals(PostalCodes.Country)">
+            <summary>
+            Determines whether the specified <see cref="T:PostalCodes.Country"/> is equal to this instance.
+            </summary>
+            <param name="other">The country to compare with the current instance.</param>
+            <returns><c>true</c> if the specified <see cref="T:PostalCodes.Country"/> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.Country.op_Equality(PostalCodes.Country,PostalCodes.Country)">
+            <summary>
+            Implements the ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.Country.op_Inequality(PostalCodes.Country,PostalCodes.Country)">
+            <summary>
+            Implements the !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.Country.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="P:PostalCodes.Country.Code">
+            <summary>
+            Gets the country code of the country
+            </summary>
+            <value>The code.</value>
+        </member>
+        <member name="P:PostalCodes.Country.Name">
+            <summary>
+            Gets the country name
+            </summary>
+            <value>The country name.</value>
+        </member>
+        <member name="T:PostalCodes.CountryFactory">
+            <summary>
+            Factory implementation for Country
+            </summary>
+        </member>
+        <member name="T:PostalCodes.ICountryFactory">
+            <summary>
+            Interface ICountryFactory
+            </summary>
+        </member>
+        <member name="M:PostalCodes.ICountryFactory.CreateCountry(System.String)">
+            <summary>
+            Retrieves a Country object using the provided country code
+            </summary>
+            <param name="countryCode">Country code representing the country</param>
+            <returns>A Country object</returns>
+        </member>
+        <member name="M:PostalCodes.CountryFactory.CreateCountry(System.String)">
+            <summary>
+            Retrieves a Country object using the provided country code
+            </summary>
+            <param name="countryCode">Country code representing the country</param>
+            <returns>A Country object</returns>
+        </member>
+        <member name="P:PostalCodes.CountryFactory.Instance">
+            <summary>
+            Gets an instance of <see cref="T:PostalCodes.CountryFactory"/>
+            </summary>
+        </member>
+        <member name="T:PostalCodes.CountryPostalCode">
+            <summary>
+            Represents a particular country postal code
+            </summary>
+        </member>
+        <member name="F:PostalCodes.CountryPostalCode.MinPostalCode">
+            <summary>
+            The minimum postal code
+            </summary>
+        </member>
+        <member name="F:PostalCodes.CountryPostalCode.MaxPostalCode">
+            <summary>
+            The maximum postal code. 
+            http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters
+            </summary>
+        </member>
+        <member name="M:PostalCodes.CountryPostalCode.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PostalCodes.CountryPostalCode"/> class.
+            </summary>
+            <param name="countryCode">The country code.</param>
+            <param name="postalCode">The postal code.</param>
+        </member>
+        <member name="M:PostalCodes.CountryPostalCode.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.CountryPostalCode.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="M:PostalCodes.CountryPostalCode.Equals(PostalCodes.CountryPostalCode)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:PostalCodes.CountryPostalCode.op_Equality(PostalCodes.CountryPostalCode,PostalCodes.CountryPostalCode)">
+            <summary>
+            Implements the ==.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.CountryPostalCode.op_Inequality(PostalCodes.CountryPostalCode,PostalCodes.CountryPostalCode)">
+            <summary>
+            Implements the !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.CountryPostalCode.CompareTo(PostalCodes.CountryPostalCode)">
+            <summary>
+            Compares the current object with another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>A value that indicates the relative order of the objects being compared. The return value has the following meanings: Value Meaning Less than zero This object is less than the <paramref name="other" /> parameter.Zero This object is equal to <paramref name="other" />. Greater than zero This object is greater than <paramref name="other" />.</returns>
+        </member>
+        <member name="M:PostalCodes.CountryPostalCode.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="P:PostalCodes.CountryPostalCode.CountryCode">
+            <summary>
+            Gets the country code.
+            </summary>
+            <value>The country code.</value>
+        </member>
+        <member name="P:PostalCodes.CountryPostalCode.PostalCode">
+            <summary>
+            Gets the postal code.
+            </summary>
+            <value>The postal code.</value>
+        </member>
+        <member name="T:PostalCodes.IPostalCodeFactory">
+            <summary>
+            Interface IPostalCodeFactory
+            </summary>
+        </member>
+        <member name="M:PostalCodes.IPostalCodeFactory.CreatePostalCode(PostalCodes.Country,System.String)">
+            <summary>
+            Creates a PostalCode object using the provided Country and postal code
+            </summary>
+            <param name="country">Country associated with the provided postal code</param>
+            <param name="postalCode">Postal code value</param>
+            <returns>A PostalCode representing the provided values</returns>
+        </member>
+        <member name="T:PostalCodes.IIsoCountryCodeValidator">
+            <summary>
+            Validates country codes against ISO 3166-1 alpha-2 standards
+            </summary>
+        </member>
+        <member name="M:PostalCodes.IIsoCountryCodeValidator.Validate(System.String)">
+            <summary>
+            Checks whether the provided country code is valid based on ISO 3166-1 alpha-2 standards
+            </summary>
+            <param name="countryCode">Country code to be validated</param>
+            <returns>True if the provided country code is valid</returns>
+        </member>
+        <member name="M:PostalCodes.IIsoCountryCodeValidator.GetNormalizedCountryCode(System.String)">
+            <summary>
+            Gets the normalized country code based on ISO 3166-1 alpha-2 standards
+            </summary>
+            <param name="countryCode">Country code to be normalized</param>
+            <returns>Normalized country code</returns>
+        </member>
+        <member name="T:PostalCodes.IsoCountryCodeValidator">
+            <summary>
+            Validates country codes against ISO 3166-1 alpha-2 standards
+            </summary>
+        </member>
+        <member name="M:PostalCodes.IsoCountryCodeValidator.Validate(System.String)">
+            <summary>
+            Checks whether the provided country code is valid based on ISO 3166-1 alpha-2 standards
+            </summary>
+            <param name="countryCode">Country code to be validated</param>
+            <returns>True if the provided country code is valid</returns>
+        </member>
+        <member name="M:PostalCodes.IsoCountryCodeValidator.GetNormalizedCountryCode(System.String)">
+            <summary>
+            Gets the normalized country code based on ISO 3166-1 alpha-2 standards
+            </summary>
+            <param name="countryCode">Country code to be normalized</param>
+            <returns>Normalized country code</returns>
+        </member>
+        <member name="T:PostalCodes.PostalCode">
+            <summary>
+            Class PostalCode.
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCode._backingPostalCode">
+            <summary>
+            The _backing postal code
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCode._currentFormat">
+            <summary>
+            The current format.
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCode._currentFormatType">
+            <summary>
+            The type of the current format.
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCode._redundantCharacters">
+            <summary>
+            The white space characters.
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCode._countryName">
+            <summary>
+            The name of the country.
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCode._allowConvertToShort">
+            <summary>
+            The allow convert to short.
+            </summary>
+        </member>
+        <member name="M:PostalCodes.PostalCode.#ctor(PostalCodes.PostalCodeFormat[],System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PostalCodes.PostalCode"/> class.
+            </summary>
+            <param name="formats">Formats.</param>
+            <param name="redundantCharacters">Characters that are considered insignificant for the meaning of the postal code</param>
+            <param name="postalCode">Postal code.</param>
+        </member>
+        <member name="M:PostalCodes.PostalCode.#ctor(PostalCodes.PostalCodeFormat[],System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PostalCodes.PostalCode"/> class.
+            </summary>
+            <param name="formats">Formats.</param>
+            <param name="redundantCharacters">Characters that are considered insignificant for the meaning of the postal code</param>
+            <param name="postalCode">Postal code.</param>
+            <param name="allowConvertToShort">If set to <c>true</c> allow convert to short format.</param>
+        </member>
+        <member name="M:PostalCodes.PostalCode.IsAdjacentTo(PostalCodes.PostalCode)">
+            <summary>
+            Determines whether [is adjacent to] [the specified other].
+            </summary>
+            <param name="other">The other.</param>
+            <returns><c>true</c> if [is adjacent to] [the specified other]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.CreatePostalCode(System.String,System.Boolean)">
+            <summary>
+            Creates new postal code
+            </summary>
+            <param name="code">The postal code to create</param>
+            <param name="allowConvertToShort">Shows wether converting to short format is allowed</param>
+            <returns></returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.CompareTo(PostalCodes.PostalCode)">
+            <summary>
+            Compares the current object with another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>A value that indicates the relative order of the objects being compared. The return value has the following meanings: Value Meaning Less than zero This object is less than the <paramref name="other" /> parameter.Zero This object is equal to <paramref name="other" />. Greater than zero This object is greater than <paramref name="other" />.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.Equals(PostalCodes.PostalCode)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.CompareTo(System.Object)">
+            <summary>
+            Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
+            </summary>
+            <param name="obj">An object to compare with this instance.</param>
+            <returns>A value that indicates the relative order of the objects being compared. The return value has these meanings: Value Meaning Less than zero This instance precedes <paramref name="obj" /> in the sort order. Zero This instance occurs in the same position in the sort order as <paramref name="obj" />. Greater than zero This instance follows <paramref name="obj" /> in the sort order.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.op_Equality(PostalCodes.PostalCode,PostalCodes.PostalCode)">
+            <summary>
+            Implements the ==.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.op_Inequality(PostalCodes.PostalCode,PostalCodes.PostalCode)">
+            <summary>
+            Implements the !=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.op_LessThan(PostalCodes.PostalCode,PostalCodes.PostalCode)">
+            <summary>
+            Implements the &lt;.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.op_GreaterThan(PostalCodes.PostalCode,PostalCodes.PostalCode)">
+            <summary>
+            Implements the &gt;.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.op_LessThanOrEqual(PostalCodes.PostalCode,PostalCodes.PostalCode)">
+            <summary>
+            Implements the &lt;=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.op_GreaterThanOrEqual(PostalCodes.PostalCode,PostalCodes.PostalCode)">
+            <summary>
+            Implements the &gt;=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.ToHumanReadableString">
+            <summary>
+            To the human readable string.
+            </summary>
+            <returns>The human readable string.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.ExpandPostalCodeAsLowestInRange">
+            <summary>
+            Expands the postal code as lowest in range.
+            </summary>
+            <returns>The postal code as lowest in range.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.ExpandPostalCodeAsHighestInRange">
+            <summary>
+            Expands the postal code as highest in range.
+            </summary>
+            <returns>The postal code as highest in range.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.AreAdjacent(PostalCodes.PostalCode,PostalCodes.PostalCode)">
+            <summary>
+            Ares the adjacent.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCode.ToHumanReadableString(System.String)">
+            <summary>
+            To the human readable string.
+            Each 'x' will be replaced by postal code char, the rest will be preserved.
+            Example: Code: A123, Format x x-xx => Result: A 1-23
+            </summary>
+            <returns>The human readable string.</returns>
+            <param name="outputFormat">Output format. </param>
+        </member>
+        <member name="M:PostalCodes.PostalCode.ClearWhiteSpaces(System.String)">
+            <summary>
+            Clears the white spaces.
+            </summary>
+            <returns>The white spaces.</returns>
+            <param name="code">Code.</param>
+        </member>
+        <member name="M:PostalCodes.PostalCode.Normalize(System.String)">
+            <summary>
+            Normalize the specified code.
+            </summary>
+            <param name="code">Code.</param>
+        </member>
+        <member name="M:PostalCodes.PostalCode.ValidateFormatCompatibility(PostalCodes.PostalCode)">
+            <summary>
+            Validates the format compatibility for comparing purposes
+            </summary>
+            <param name="other">The other.</param>
+            <returns><c>true</c> if the formats can be compared, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="P:PostalCodes.PostalCode.PostalCodeString">
+            <summary>
+            Gets the postal code string.
+            </summary>
+            <value>The postal code string.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCode.Predecessor">
+            <summary>
+            Gets the predecessor.
+            </summary>
+            <value>The predecessor.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCode.Successor">
+            <summary>
+            Gets the successor.
+            </summary>
+            <value>The successor.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCode.PredecessorImpl">
+            <summary>
+            Gets the predecessor implementation.
+            </summary>
+            <value>The predecessor implementation.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCode.SuccessorImpl">
+            <summary>
+            Gets the successor implementation.
+            </summary>
+            <value>The successor implementation.</value>
+        </member>
+        <member name="T:PostalCodes.PostalCode.FormatType">
+            <summary>
+            Format type.
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCode.FormatType.Default">
+            <summary>
+            The default.
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCode.FormatType.Short">
+            <summary>
+            The short.
+            </summary>
+        </member>
+        <member name="T:PostalCodes.PostalCodeRange">
+            <summary>
+            Class PostalCodeRange.
+            </summary>
+        </member>
+        <member name="F:PostalCodes.PostalCodeRange.LazyDefault">
+            <summary>
+            The lazy default
+            </summary>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.#ctor(PostalCodes.PostalCode,PostalCodes.PostalCode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:PostalCodes.PostalCodeRange"/> class.
+            </summary>
+            <param name="start">The start.</param>
+            <param name="end">The end.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.System#IComparable#CompareTo(System.Object)">
+            <summary>
+            Compares the current instance with another object of the same type and returns an integer that indicates whether the current instance precedes, follows, or occurs in the same position in the sort order as the other object.
+            </summary>
+            <param name="obj">An object to compare with this instance.</param>
+            <returns>A value that indicates the relative order of the objects being compared. The return value has these meanings: Value Meaning Less than zero This instance precedes <paramref name="obj" /> in the sort order. Zero This instance occurs in the same position in the sort order as <paramref name="obj" />. Greater than zero This instance follows <paramref name="obj" /> in the sort order.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.CompareTo(PostalCodes.PostalCodeRange)">
+            <summary>
+            This comparer is designed to prefer (i.e. evaluate as smaller) more narrow subset ranges,
+            where there is no overlap or a partial intersection, the one with the higher start is
+            preferred.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>A value that indicates the relative order of the objects being compared. The return value has the following meanings: Value Meaning Less than zero This object is less than the <paramref name="other" /> parameter.Zero This object is equal to <paramref name="other" />. Greater than zero This object is greater than <paramref name="other" />.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.Equals(PostalCodes.PostalCodeRange)">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>true if the current object is equal to the <paramref name="other" /> parameter; otherwise, false.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object"/> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.op_LessThan(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Implements the &lt;.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.op_LessThanOrEqual(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Implements the &lt;=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.op_GreaterThan(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Implements the &gt;.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.op_GreaterThanOrEqual(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Implements the &gt;=.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>The result of the operator.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.AreAdjacent(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Ares the adjacent.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.IntersectsRange(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Intersectses the range.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.AreCoincident(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Ares the coincident.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.AreOverlapping(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Ares the overlapping.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.Contains(PostalCodes.PostalCodeRange,PostalCodes.PostalCode)">
+            <summary>
+            Determines whether [contains] [the specified range].
+            </summary>
+            <param name="range">The range.</param>
+            <param name="specificCode">The specific code.</param>
+            <returns><c>true</c> if [contains] [the specified range]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.Contains(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Determines whether [contains] [the specified outer].
+            </summary>
+            <param name="outer">The outer.</param>
+            <param name="inner">The inner.</param>
+            <returns><c>true</c> if [contains] [the specified outer]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.Contains(PostalCodes.PostalCode)">
+            <summary>
+            Determines whether the range contains substractFrom postal code.
+            </summary>
+            <param name="postalCode">The postal code.</param>
+            <returns><c>true</c> if range contains the specified postal code; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.Substract(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Implements set substraction operation (A-B = all elements existing in A but not in B)
+            </summary>
+            <param name="substractFrom"></param>
+            <param name="substractWhat"></param>
+            <returns></returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.CombineWithCheck(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Combines the with check.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>PostalCodeRange.</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:PostalCodes.PostalCodeRange.Combine(PostalCodes.PostalCodeRange,PostalCodes.PostalCodeRange)">
+            <summary>
+            Combines the specified left.
+            </summary>
+            <param name="left">The left.</param>
+            <param name="right">The right.</param>
+            <returns>PostalCodeRange.</returns>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.Default">
+            <summary>
+            Gets the default.
+            </summary>
+            <value>The default.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.IsIndefinite">
+            <summary>
+            Gets a value indicating whether this instance is indefinite.
+            </summary>
+            <value><c>true</c> if this instance is indefinite; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.IsDefault">
+            <summary>
+            Gets a value indicating whether this instance is default.
+            </summary>
+            <value><c>true</c> if this instance is default; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.Start">
+            <summary>
+            Gets the start.
+            </summary>
+            <value>The start.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.End">
+            <summary>
+            Gets the end.
+            </summary>
+            <value>The end.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.PredecessorPostalCode">
+            <summary>
+            Gets the predecessor postal code.
+            </summary>
+            <value>The predecessor postal code.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.SuccessorPostalCode">
+            <summary>
+            Gets the successor postal code.
+            </summary>
+            <value>The successor postal code.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.StartDefined">
+            <summary>
+            Gets a value indicating whether [start defined].
+            </summary>
+            <value><c>true</c> if [start defined]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeRange.EndDefined">
+            <summary>
+            Gets a value indicating whether [end defined].
+            </summary>
+            <value><c>true</c> if [end defined]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:PostalCodes.IsoCountryCodeConverter">
+            <summary>
+            ISO 3166 country code converter
+            </summary>
+        </member>
+        <member name="M:PostalCodes.IsoCountryCodeConverter.GetIso3166p3Code(System.String)">
+            <summary>
+            Gets the iso3166-3 country code (if any).
+            </summary>
+            <param name="countryCode">Country code.</param>
+            <returns>The iso3166p3 code.</returns>
+        </member>
+        <member name="T:PostalCodes.Iso3166CountryCodeStatus">
+            <summary>
+            Statuses taken from http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+            </summary>
+        </member>
+        <member name="T:PostalCodes.PostalCodeFormat">
+            <summary>
+            Postal code format.
+            </summary>
+        </member>
+        <member name="M:PostalCodes.PostalCodeFormat.Equals(PostalCodes.PostalCodeFormat)">
+            <summary>
+            Determines whether the specified <see cref="T:PostalCodes.PostalCodeFormat"/> is equal to the current <see cref="T:PostalCodes.PostalCodeFormat"/>.
+            </summary>
+            <param name="other">The <see cref="T:PostalCodes.PostalCodeFormat"/> to compare with the current <see cref="T:PostalCodes.PostalCodeFormat"/>.</param>
+            <returns><c>true</c> if the specified <see cref="T:PostalCodes.PostalCodeFormat"/> is equal to the current
+            <see cref="T:PostalCodes.PostalCodeFormat"/>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeFormat.GetHashCode">
+            <summary>
+            Serves as a hash function for a <see cref="T:PostalCodes.PostalCodeFormat"/> object.
+            </summary>
+            <returns>A hash code for this instance that is suitable for use in hashing algorithms and data structures such as a
+            hash table.</returns>
+        </member>
+        <member name="M:PostalCodes.PostalCodeFormat.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:PostalCodes.PostalCodeFormat"/>.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object"/> to compare with the current <see cref="T:PostalCodes.PostalCodeFormat"/>.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object"/> is equal to the current
+            <see cref="T:PostalCodes.PostalCodeFormat"/>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.RegexDefault">
+            <summary>
+            Gets or sets the regex default.
+            </summary>
+            <value>The regex default.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.OutputDefault">
+            <summary>
+            Gets or sets the output default.
+            </summary>
+            <value>The output default.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.RegexShort">
+            <summary>
+            Gets or sets the regex short.
+            </summary>
+            <value>The regex short.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.OutputShort">
+            <summary>
+            Gets or sets the output short.
+            </summary>
+            <value>The output short.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.AutoConvertToShort">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:PostalCodes.PostalCodeFormat"/> auto convert to short.
+            </summary>
+            <value><c>true</c> if auto convert to short; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.ShortExpansionAsLowestInRange">
+            <summary>
+            Gets or sets the short expansion as lowest in range.
+            </summary>
+            <value>The short expansion as lowest in range.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.ShortExpansionAsHighestInRange">
+            <summary>
+            Gets or sets the short expansion as highest in range.
+            </summary>
+            <value>The short expansion as highest in range.</value>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFormat.LeftPaddingCharacter">
+            <summary>
+            Gets or sets the pad left character.
+            </summary>
+            <value>The pad left character.</value>
+        </member>
+        <member name="M:PostalCodes.GenericPostalCodes.AlphaNumericPostalCode.GetInternalValue">
+            <summary>
+            Gets the internal value.
+            </summary>
+            <returns>The internal value.</returns>
+        </member>
+        <member name="M:PostalCodes.GenericPostalCodes.AlphaNumericPostalCode.GenerateSuccesorOrPredecessor(System.String,System.Boolean)">
+            <summary>
+            Generates the succesor or predecessor.
+            </summary>
+            <returns>The succesor or predecessor.</returns>
+            <param name="postalCode">Postal code.</param>
+            <param name="getSuccessor">If set to <c>true</c> get successor.</param>
+        </member>
+        <member name="P:PostalCodes.GenericPostalCodes.AlphaNumericPostalCode.PredecessorImpl">
+            <summary>
+            Gets the predecessor implementation.
+            </summary>
+            <value>The predecessor implementation.</value>
+        </member>
+        <member name="P:PostalCodes.GenericPostalCodes.AlphaNumericPostalCode.SuccessorImpl">
+            <summary>
+            Gets the successor implementation.
+            </summary>
+            <value>The successor implementation.</value>
+        </member>
+        <member name="T:PostalCodes.PostalCodeFactory">
+            <summary>
+            Factory implementation for PostalCode
+            </summary>
+        </member>
+        <member name="M:PostalCodes.PostalCodeFactory.CreatePostalCode(PostalCodes.Country,System.String)">
+            <summary>
+            Creates a PostalCode object using the provided Country and postal code
+            </summary>
+            <param name="country">Country associated with the provided postal code</param>
+            <param name="postalCode">Postal code value</param>
+            <returns>A PostalCode representing the provided values</returns>
+        </member>
+        <member name="P:PostalCodes.PostalCodeFactory.Instance">
+            <summary>
+            Gets an instance of PostalCodeFactory
+            </summary>
+        </member>
+        <member name="P:PostalCodes.GenericPostalCodes.DefaultPostalCode.PredecessorImpl">
+            <summary>
+            Gets the predecessor implementation.
+            </summary>
+            <value>The predecessor implementation.</value>
+        </member>
+        <member name="P:PostalCodes.GenericPostalCodes.DefaultPostalCode.SuccessorImpl">
+            <summary>
+            Gets the successor implementation.
+            </summary>
+            <value>The successor implementation.</value>
+        </member>
+    </members>
+</doc>
