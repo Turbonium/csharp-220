@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:ContactApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem x:Name="uxFileNew" Header="_New" Click="uxFileNew_Click" />
+            </MenuItem>
+        </Menu>
+    </StackPanel>
 </Window>
