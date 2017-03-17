@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15ACD265-0E4F-41EE-B4A5-0565FE3AEE3C}</ProjectGuid>
+    <ProjectGuid>{C360D259-A4E2-45B9-9601-9D45D91F2BF5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ContactDB</RootNamespace>
-    <AssemblyName>ContactDB</AssemblyName>
+    <RootNamespace>ContactRepository</RootNamespace>
+    <AssemblyName>ContactRepository</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,8 +41,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,53 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contact.cs">
-      <DependentUpon>ContactModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ContactModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ContactModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ContactModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ContactModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ContactModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ContactModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="ContactRepository.cs" />
+    <Compile Include="DatabaseManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="ContactModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ContactModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="ContactModel.edmx.diagram">
-      <DependentUpon>ContactModel.edmx</DependentUpon>
-    </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ContactModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ContactModel.Context.cs</LastGenOutput>
-      <DependentUpon>ContactModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="ContactModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ContactModel.edmx</DependentUpon>
-      <LastGenOutput>ContactModel.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <ProjectReference Include="..\ContactDB\ContactDB.csproj">
+      <Project>{15acd265-0e4f-41ee-b4a5-0565fe3aee3c}</Project>
+      <Name>ContactDB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
