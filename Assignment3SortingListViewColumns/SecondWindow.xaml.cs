@@ -20,8 +20,7 @@ namespace Assignment3SortingListViewColumns
     /// </summary>
     public partial class SecondWindow : Window
     {
-        bool? nameSortAsc = null;
-        bool? passwordSortAsc = null;
+        private bool sortAsc;
 
         public SecondWindow()
         {
@@ -35,42 +34,23 @@ namespace Assignment3SortingListViewColumns
             users.Add(new Models.User { Name = "Albert", Password = "4" });
 
             uxList.ItemsSource = users;
-            AddHandler(System.Windows.Controls.Primitives.ButtonBase.ClickEvent, new RoutedEventHandler(ListView_OnColumnClick));
         }
 
-        
 
-        private void ListView_OnColumnClick(object sender, RoutedEventArgs e)
+        private void ColumnHeader_Click(object sender, RoutedEventArgs e)
         {
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(uxList.ItemsSource);
             view.SortDescriptions.Clear();
-
-            if (e.OriginalSource.ToString().Contains("Name"))
+            var test = ((ContentControl)((GridViewColumnHeader)e.OriginalSource).Column.Header).Content.ToString();
+            if (sortAsc == false)
             {
-                if (nameSortAsc == false || nameSortAsc == null)
-                {
-                    nameSortAsc = true;
-                    view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));                    
-                }
-                else
-                {
-                    nameSortAsc = false;
-                    view.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Descending));
-                }
+                view.SortDescriptions.Add(new SortDescription(test, ListSortDirection.Ascending));
+                sortAsc = true;
             }
-
-            if (e.OriginalSource.ToString().Contains("Password"))
+            else
             {
-                if (passwordSortAsc == false || passwordSortAsc == null)
-                {
-                    passwordSortAsc = true;
-                    view.SortDescriptions.Add(new SortDescription("Password", ListSortDirection.Ascending));
-                }
-                else
-                {
-                    passwordSortAsc = false;
-                    view.SortDescriptions.Add(new SortDescription("Password", ListSortDirection.Descending));
-                }
+                view.SortDescriptions.Add(new SortDescription(test, ListSortDirection.Descending));
+                sortAsc = false;
             }
         }
     }

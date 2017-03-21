@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="SecondWindow" Height="300" Width="300">
     <Grid>
-        <ListView x:Name="uxList">
+        <ListView x:Name="uxList" GridViewColumnHeader.Click="ColumnHeader_Click" Tag="blah">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Name}">
-                        Name
+                        <GridViewColumnHeader Tag = "Name" Content ="Name"></GridViewColumnHeader>
                     </GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Password}">
-                        Password
+                        <GridViewColumnHeader Tag = "Password" Content = "Password"></GridViewColumnHeader>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
