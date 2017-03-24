@@ -20,9 +20,11 @@ namespace Assignment5TicTacToe
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool xTurn = true;
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void uxNewGame_Click(object sender, RoutedEventArgs e)
@@ -32,7 +34,17 @@ namespace Assignment5TicTacToe
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+                Button btn = sender as Button;
+            if (xTurn)
+            {
+                btn.Content = "X";
+                xTurn = false;
+            }
+            else
+            {
+                btn.Content = "O";
+                xTurn = true;
+            }
         }
     }
 }
