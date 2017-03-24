@@ -22,3 +22,5 @@ C:\Source\Repos\csharp-220\ContactApp\ContactApp\bin\Debug\ContactDB.pdb
 C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactApp.csprojResolveAssemblyReference.cache
 C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactWindow.g.cs
 C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\ContactWindow.baml
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\MouseWindow.g.cs
+C:\Source\Repos\csharp-220\ContactApp\ContactApp\obj\Debug\MouseWindow.baml
