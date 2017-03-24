@@ -26,29 +26,98 @@ namespace Assignment5TicTacToe
         {
             InitializeComponent();
             uxTurn.Text = "X's Turn (X always go first).";
-
-        }
-
-        private void uxNewGame_Click(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-                Button btn = sender as Button;
+            Button btn = sender as Button;
             if (xTurn)
             {
                 btn.Content = "X";
+                btn.IsEnabled = false;
                 xTurn = false;
-                uxTurn.Text = "O's Turn!";
+                WinCondition(btn.Content.ToString());
             }
             else
             {
                 btn.Content = "O";
+                btn.IsEnabled = false;
                 xTurn = true;
-                uxTurn.Text = "X's Turn!";
+                WinCondition(btn.Content.ToString());
             }
+        }
+
+        private void WinCondition(string btnContent)
+        {
+            if (
+                (Button0.Content == btnContent && Button1.Content == btnContent && Button2.Content == btnContent) ||
+                //Row 1 Check
+                (Button3.Content == btnContent && Button4.Content == btnContent && Button5.Content == btnContent) ||
+                //Row 2 Check
+                (Button6.Content == btnContent && Button7.Content == btnContent && Button8.Content == btnContent) ||
+                //Row 3 Check
+                (Button0.Content == btnContent && Button3.Content == btnContent && Button6.Content == btnContent) ||
+                //Column 1 Check
+                (Button1.Content == btnContent && Button4.Content == btnContent && Button7.Content == btnContent) ||
+                //Column 2 Check
+                (Button2.Content == btnContent && Button5.Content == btnContent && Button8.Content == btnContent) ||
+                //Column 3 Check
+                (Button0.Content == btnContent && Button4.Content == btnContent && Button8.Content == btnContent) ||
+                //Diagonal L>R Check
+                (Button2.Content == btnContent && Button4.Content == btnContent && Button6.Content == btnContent)
+                //Diagonal R>L Check
+            )
+            {
+                if (btnContent == "O")
+                {
+                    uxTurn.Text = "Player O Wins!";
+                    MessageBox.Show("Player O Wins!");
+                }
+                else if (btnContent == "X")
+                {
+                    uxTurn.Text = "Player X Wins!";
+                    MessageBox.Show("Player X Wins!");
+                }
+                disableButtons();
+            }
+            else
+            {
+                uxTurn.Text = (xTurn == true) ? "X's Turn!" : "O's Turn!";
+                foreach (Button btn in uxGrid.Children)
+                {
+                    if (btn.IsEnabled == true)
+                    {
+                        return;
+                    }
+                }
+                uxTurn.Text = "Game OVER! No Winner!";
+                MessageBox.Show("Game Over, Nobody wins!");
+            }
+        }
+
+        private void disableButtons()
+        {
+            foreach (Button btn in uxGrid.Children)
+            {
+                btn.IsEnabled = false;
+            }
+        }
+
+        private void uxNewGame_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Button btn in uxGrid.Children)
+            {
+                btn.Content = "";
+                btn.IsEnabled = true;
+                xTurn = true;
+                uxTurn.Text = "X's Turn (X always go first).";
+            }
+        }
+
+        private void uxClose_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Thanks for playing!");
+            Close();
         }
     }
 }

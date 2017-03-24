@@ -10,7 +10,7 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem x:Name="uxNewGame" Header="_New Game" Click="uxNewGame_Click"></MenuItem>
-                <MenuItem Header="E_xit"></MenuItem>
+                <MenuItem Header="E_xit" Click="uxClose_Click"></MenuItem>
             </MenuItem>
         </Menu>
 
@@ -28,20 +28,21 @@
                     <RowDefinition Height="50"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50"></ColumnDefinition>
+                    <ColumnDefinition Width="6"></ColumnDefinition>
+                    <ColumnDefinition Width="45"/>
                     <ColumnDefinition Width="50"></ColumnDefinition>
                     <ColumnDefinition Width="50"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="0" Click="Button_Click" Tag="0,0"></Button>
-                <Button Grid.Row="0" Grid.Column="1" Click="Button_Click" Tag="0,1"></Button>
-                <Button Grid.Row="0" Grid.Column="2" Click="Button_Click" Tag="0,2"></Button>
-                <Button Grid.Row="1" Grid.Column="0" Click="Button_Click" Tag="1,0"></Button>
-                <Button Grid.Row="1" Grid.Column="1" Click="Button_Click" Tag="1,1"></Button>
-                <Button Grid.Row="1" Grid.Column="2" Click="Button_Click" Tag="1,2"></Button>
-                <Button Grid.Row="2" Grid.Column="0" Click="Button_Click" Tag="2,0"></Button>
-                <Button Grid.Row="2" Grid.Column="1" Click="Button_Click" Tag="2,1"></Button>
-                <Button Grid.Row="2" Grid.Column="2" Click="Button_Click" Tag="2,2"></Button>
+                <Button Grid.Row="0" Grid.Column="0" Click="Button_Click" Tag="0,0" x:Name="Button0" Grid.ColumnSpan="2"></Button>
+                <Button Grid.Row="0" Grid.Column="2" Click="Button_Click" Tag="0,1" x:Name="Button1"></Button>
+                <Button Grid.Row="0" Grid.Column="3" Click="Button_Click" Tag="0,2" x:Name="Button2"></Button>
+                <Button Grid.Row="1" Grid.Column="0" Click="Button_Click" Tag="1,0" x:Name="Button3" Grid.ColumnSpan="2"></Button>
+                <Button Grid.Row="1" Grid.Column="2" Click="Button_Click" Tag="1,1" x:Name="Button4"></Button>
+                <Button Grid.Row="1" Grid.Column="3" Click="Button_Click" Tag="1,2" x:Name="Button5"></Button>
+                <Button Grid.Row="2" Grid.Column="0" Click="Button_Click" Tag="2,0" x:Name="Button6" Grid.ColumnSpan="2"></Button>
+                <Button Grid.Row="2" Grid.Column="2" Click="Button_Click" Tag="2,1" x:Name="Button7"></Button>
+                <Button Grid.Row="2" Grid.Column="3" Click="Button_Click" Tag="2,2" x:Name="Button8"></Button>
             </Grid>
         </Border>
     </DockPanel>
