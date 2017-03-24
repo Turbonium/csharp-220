@@ -68,7 +68,7 @@ namespace Assignment5TicTacToe
                 //Diagonal R>L Check
             )
             {
-                string player = btnContent.ToString();
+                string player = btnContent;
                 uxTurn.Text = $"Player {player} Wins!";
                 MessageBox.Show($"Player {player} Wins!");
                 disableButtons();
