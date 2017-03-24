@@ -21,10 +21,12 @@ namespace Assignment5TicTacToe
     public partial class MainWindow : Window
     {
         bool xTurn = true;
+
         public MainWindow()
         {
             InitializeComponent();
-            
+            uxTurn.Text = "X's Turn (X always go first).";
+
         }
 
         private void uxNewGame_Click(object sender, RoutedEventArgs e)
@@ -39,11 +41,13 @@ namespace Assignment5TicTacToe
             {
                 btn.Content = "X";
                 xTurn = false;
+                uxTurn.Text = "O's Turn!";
             }
             else
             {
                 btn.Content = "O";
                 xTurn = true;
+                uxTurn.Text = "X's Turn!";
             }
         }
     }
