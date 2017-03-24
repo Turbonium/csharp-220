@@ -84,7 +84,7 @@ namespace Assignment5TicTacToe
                     }
                 }
                 uxTurn.Text = "Game OVER! No Winner!";
-                MessageBox.Show("Game Over, Nobody wins!");
+                MessageBox.Show("Game Over, No Winner!");
             }
         }
 
