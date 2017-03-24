@@ -54,7 +54,16 @@ namespace ContactApp
 
         private void uxFileChange_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            // Perform a shallow copy of p1 and assign it to p2.
+            var window = new ContactWindow();
+            window.Contact = (ContactModel)selectedContact.ShallowCopy();
+
+            if (window.ShowDialog() == true)
+            {
+
+                App.ContactRepository.Update(window.Contact.ToRepositoryModel());
+                LoadContacts();
+            }
         }
 
         private void uxFileDelete_Click(object sender, RoutedEventArgs e)
@@ -66,7 +75,7 @@ namespace ContactApp
 
         private void ColumnHeader_Click(object sender, RoutedEventArgs e)
         {
-            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(uxContactList.ItemsSource);
+            CollectionView view = (CollectionView) CollectionViewSource.GetDefaultView(uxContactList.ItemsSource);
             GridViewColumnHeader column = (sender as GridViewColumnHeader);
             string sortBy = column.Tag.ToString();
             if (listViewSortCol != null)
@@ -84,18 +93,19 @@ namespace ContactApp
             AdornerLayer.GetAdornerLayer(listViewSortCol).Add(listViewSortAdorner);
             view.SortDescriptions.Add(new SortDescription(sortBy, newDir));
         }
+
         public class SortAdorner : Adorner
         {
             private static Geometry ascGeometry =
-                    Geometry.Parse("M 0 4 L 3.5 0 L 7 4 Z");
+                Geometry.Parse("M 0 4 L 3.5 0 L 7 4 Z");
 
             private static Geometry descGeometry =
-                    Geometry.Parse("M 0 0 L 3.5 4 L 7 0 Z");
+                Geometry.Parse("M 0 0 L 3.5 4 L 7 0 Z");
 
             public ListSortDirection Direction { get; private set; }
 
             public SortAdorner(UIElement element, ListSortDirection dir)
-                    : base(element)
+                : base(element)
             {
                 this.Direction = dir;
             }
@@ -108,10 +118,10 @@ namespace ContactApp
                     return;
 
                 TranslateTransform transform = new TranslateTransform
-                        (
-                                AdornedElement.RenderSize.Width - 15,
-                                (AdornedElement.RenderSize.Height - 5) / 2
-                        );
+                (
+                    AdornedElement.RenderSize.Width - 15,
+                    (AdornedElement.RenderSize.Height - 5) / 2
+                );
                 drawingContext.PushTransform(transform);
 
                 Geometry geometry = ascGeometry;
@@ -133,5 +143,12 @@ namespace ContactApp
             uxFileDelete.IsEnabled = (selectedContact != null);
             uxContextFileDelete.IsEnabled = (selectedContact != null);
         }
+
+        private void uxFileChange_Loaded(object sender, RoutedEventArgs e)
+        {
+            uxFileChange.IsEnabled = (selectedContact != null);
+            uxContextFileChange.IsEnabled = (selectedContact != null);
+        }
     }
 }
+

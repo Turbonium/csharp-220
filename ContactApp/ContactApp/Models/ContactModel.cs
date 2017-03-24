@@ -46,5 +46,10 @@ namespace ContactApp.Models
 
             return contactModel;
         }
+
+        public ContactModel ShallowCopy()
+        {
+            return (ContactModel)this.MemberwiseClone();
+        }
     }
 }
