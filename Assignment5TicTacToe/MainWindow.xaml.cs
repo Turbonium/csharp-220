@@ -68,16 +68,9 @@ namespace Assignment5TicTacToe
                 //Diagonal R>L Check
             )
             {
-                if (btnContent == "O")
-                {
-                    uxTurn.Text = "Player O Wins!";
-                    MessageBox.Show("Player O Wins!");
-                }
-                else if (btnContent == "X")
-                {
-                    uxTurn.Text = "Player X Wins!";
-                    MessageBox.Show("Player X Wins!");
-                }
+                string player = btnContent.ToString();
+                uxTurn.Text = $"Player {player} Wins!";
+                MessageBox.Show($"Player {player} Wins!");
                 disableButtons();
             }
             else
