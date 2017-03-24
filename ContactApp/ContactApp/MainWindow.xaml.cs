@@ -56,7 +56,7 @@ namespace ContactApp
         {
             // Perform a shallow copy of p1 and assign it to p2.
             var window = new ContactWindow();
-            window.Contact = (ContactModel)selectedContact.ShallowCopy();
+            window.Contact = selectedContact.Clone();
 
             if (window.ShowDialog() == true)
             {
