@@ -6,9 +6,9 @@
     </Key>
     <Property Name="ContactId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ContactEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ContactPhoneType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ContactPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContactEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactPhoneType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ContactAge" Type="Int32" Nullable="false" />
     <Property Name="ContactNotes" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="ContactCreatedDate" Type="DateTime" Nullable="false" Precision="3" />

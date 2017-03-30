@@ -119,9 +119,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Appbkp.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ContactRepository\ContactRepository.csproj">
       <Project>{c360d259-a4e2-45b9-9601-9d45d91f2bf5}</Project>
       <Name>ContactRepository</Name>
