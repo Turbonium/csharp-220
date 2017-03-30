@@ -149,6 +149,11 @@ namespace ContactApp
             uxFileChange.IsEnabled = (selectedContact != null);
             uxContextFileChange.IsEnabled = (selectedContact != null);
         }
+
+        private void uxFileExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
 
