@@ -42,11 +42,12 @@ namespace GameInventory
             if (uxXbox.IsChecked.Value)
             {
                 Games.GamePlatform = "XBox";
-            } else if (uxPC.IsChecked.Value)
-            {
-                Games.GamePlatform = "XBox";
             }
-            else
+            if (uxPC.IsChecked.Value)
+            {
+                Games.GamePlatform = "PC";
+            }
+            if (uxBoardGame.IsChecked.Value)
             {
                 Games.GamePlatform = "Board Game";
             }
