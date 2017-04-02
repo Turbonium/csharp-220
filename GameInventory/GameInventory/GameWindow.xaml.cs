@@ -66,18 +66,15 @@ namespace GameInventory
 
         private bool validateInputs(GameModel gameModel)
         {
-            decimal i;
             if (gameModel.GameQuantity <= 0) gameModel.GameQuantity = 1;
-            bool costCheck = decimal.TryParse(gameModel.GameCostPerUnit.ToString(), out i);
-            bool retailCheck = decimal.TryParse(gameModel.GameRetailPerUnit.ToString(), out i);
 
-            if (!costCheck || gameModel.GameCostPerUnit < 0)
+            if (gameModel.GameCostPerUnit < 0)
             {
                 MessageBox.Show("Cost per unit must be a positive integer value!");
                 return false;
             }
 
-            if (!retailCheck || gameModel.GameRetailPerUnit < 0)
+            if (gameModel.GameRetailPerUnit < 0)
             {
                 MessageBox.Show("Retail per unit must be a positive integer value!");
                 return false;
