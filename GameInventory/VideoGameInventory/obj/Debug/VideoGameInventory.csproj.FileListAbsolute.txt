@@ -1,0 +1,1 @@
+C:\Source\Repos\csharp-220\GameInventory\VideoGameInventory\bin\Debug\VideoGameInventory.exe.config

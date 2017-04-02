@@ -1,0 +1,72 @@
+﻿<Window x:Class="GameInventory.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameInventory"
+        mc:Ignorable="d"
+        Title="Game Details" Width="400" Height="240"
+        FocusManager.FocusedElement="{Binding ElementName=uxTitle}"
+        Loaded="Window_Loaded">
+
+    <Grid x:Name="uxGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right">Game Title:</TextBlock>
+        <TextBox x:Name="uxTitle" Text ="{Binding GameTitle}"  Grid.Column="1" Grid.Row="0"></TextBox>
+
+        <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right">Game Type:</TextBlock>
+        <TextBox x:Name="uxType" Grid.Column="1" Grid.Row="1"></TextBox>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+            <RadioButton x:Name="uxDigital" IsChecked="true" Margin =" 5,1,1,1">Digital</RadioButton>
+            <RadioButton x:Name="uxPhysical" Margin =" 10,1,1,1">Physical</RadioButton>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right">Platform:</TextBlock>
+        <TextBox x:Name="uxPlatform" Grid.Column="1" Grid.Row="2"></TextBox>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
+            <RadioButton x:Name="uxXbox" IsChecked="true" Margin="5,1,1,1">XBox</RadioButton>
+            <RadioButton x:Name="uxPC" Margin ="10,1,1,1">PC</RadioButton>
+            <RadioButton x:Name="uxBoardGame" Margin ="10,1,1,1">Board Game</RadioButton>
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right">Quantity:</TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3">
+            <Slider x:Name="uxQuantity" Value="{Binding GameQuantity}" Width = "50" Minimum ="1" Maximum="100" TickFrequency="1" IsSnapToTickEnabled="True"/>
+            <TextBox Text="{Binding ElementName=uxQuantity, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" />
+        </StackPanel>
+
+        <TextBlock Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right">Cost Per Unit:</TextBlock>
+        <TextBox x:Name="uxCost" Text ="{Binding GameCostPerUnit, StringFormat='{}{0:c}'}"  KeyUp="TextBox_KeyEnterUpdate" Grid.Column="1" Grid.Row="4" AcceptsReturn="False" TextAlignment="Left" Margin="0,0,212,1" Grid.RowSpan="2"/>
+
+        <!--<TextBlock Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right">Total Cost:</TextBlock>
+        <TextBox x:Name="uxTotalCost" Text ="{Binding GameTotalCost}" Grid.Column="1" Grid.Row="6" AcceptsReturn="True" TextWrapping="Wrap" Width ="50" TextAlignment="Left" Margin="0,0,236,0"></TextBox>-->
+
+        <TextBlock Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right">Retail Price Per Unit:</TextBlock>
+        <TextBox x:Name="uxRetailPrice" Text ="{Binding GameRetailPerUnit, StringFormat='{}{0:c}'}"  KeyUp="TextBox_KeyEnterUpdate" Grid.Column="1" Grid.Row="7" AcceptsReturn="False" TextAlignment="Left" Margin="0,0,212,0"/>
+
+        <!--<TextBlock Grid.Column="0" Grid.Row="8" HorizontalAlignment="Right">Retail Total:</TextBlock>
+        <TextBox x:Name="uxRetailTotal" Text ="{Binding GameTotalRetail}" Grid.Column="1" Grid.Row="8" AcceptsReturn="True" TextWrapping="Wrap" Width ="50" TextAlignment="Left" Margin="0,0,236,0"></TextBox>-->
+
+
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Right">
+            <Button x:Name="uxSubmit"  MinWidth="10" HorizontalAlignment="Center" Click="uxSubmit_Click" Margin="10">Submit</Button>
+            <Button x:Name="uxCancel"  MinWidth="10" HorizontalAlignment="Center" Click="uxCancel_Click" Margin="10">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</Window>

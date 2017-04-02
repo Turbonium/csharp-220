@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GameInventoryModelStoreContainer" CdmEntityContainer="GameInventoryEntities">
+    <EntitySetMapping Name="Games">
+      <EntityTypeMapping TypeName="GameInventoryModel.Game">
+        <MappingFragment StoreEntitySet="Games">
+          <ScalarProperty Name="GameId" ColumnName="GameId" />
+          <ScalarProperty Name="GameTitle" ColumnName="GameTitle" />
+          <ScalarProperty Name="GameType" ColumnName="GameType" />
+          <ScalarProperty Name="GamePlatform" ColumnName="GamePlatform" />
+          <ScalarProperty Name="GameQuantity" ColumnName="GameQuantity" />
+          <ScalarProperty Name="GameCostPerUnit" ColumnName="GameCostPerUnit" />
+          <ScalarProperty Name="GameTotalCost" ColumnName="GameTotalCost" />
+          <ScalarProperty Name="GameRetailPerUnit" ColumnName="GameRetailPerUnit" />
+          <ScalarProperty Name="GameTotalRetail" ColumnName="GameTotalRetail" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

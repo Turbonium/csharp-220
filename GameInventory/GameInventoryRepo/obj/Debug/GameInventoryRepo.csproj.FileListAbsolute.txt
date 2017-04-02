@@ -1,0 +1,12 @@
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\GameInventoryRepo.dll.config
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\GameInventoryRepo.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\GameInventoryRepo.pdb
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\EntityFramework.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\GameInventoryDB.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\GameInventoryDB.pdb
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\EntityFramework.xml
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\obj\Debug\GameInventoryRepo.csprojResolveAssemblyReference.cache
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\obj\Debug\GameInventoryRepo.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryRepo\obj\Debug\GameInventoryRepo.pdb

@@ -1,0 +1,10 @@
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\bin\Debug\GameInventoryDB.dll.config
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\bin\Debug\GameInventoryDB.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\bin\Debug\GameInventoryDB.pdb
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\bin\Debug\EntityFramework.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\bin\Debug\EntityFramework.xml
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\obj\Debug\GameInventoryDB.csprojResolveAssemblyReference.cache
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\obj\Debug\GameInventoryDB.dll
+C:\Source\Repos\csharp-220\GameInventory\GameInventoryDB\obj\Debug\GameInventoryDB.pdb

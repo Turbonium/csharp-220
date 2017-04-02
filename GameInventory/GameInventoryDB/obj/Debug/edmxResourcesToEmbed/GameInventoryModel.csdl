@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GameInventoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Game">
+    <Key>
+      <PropertyRef Name="GameId" />
+    </Key>
+    <Property Name="GameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GameTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GameType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GamePlatform" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GameQuantity" Type="Int32" Nullable="false" />
+    <Property Name="GameCostPerUnit" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GameTotalCost" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GameRetailPerUnit" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GameTotalRetail" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="GameInventoryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Games" EntityType="Self.Game" />
+  </EntityContainer>
+</Schema>
